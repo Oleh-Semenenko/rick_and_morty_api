@@ -1,13 +1,16 @@
+import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import {HomePage} from "pages/HomePage/HomePage";
-import {CharacterPage} from "pages/CharacterPage/CharacterPage"
-import "./App.css";
+
+const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
+const CharacterPage = lazy(() => import("../../pages/CharacterPage/CharacterPage"));
 
 export const App = () => {
 	return (
-		<Routes>
-			<Route path='/' element={<HomePage />} />
-			<Route path='/:id' element={<CharacterPage />} />
-		</Routes>
+		<Suspense fallback={<div>Loading...</div>}>
+			<Routes>
+				<Route path='/' element={<HomePage />} />
+				<Route path='/:id' element={<CharacterPage />} />
+			</Routes>
+		</Suspense>
 	);
 };

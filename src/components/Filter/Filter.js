@@ -1,9 +1,15 @@
-import './Filter.css';
+import "./Filter.css";
 
-export const Filter = () => {
-    return (
-			<div className="input-wrapper">
-				<input className='input' placeholder='Filter by name' />
-			</div>
-		);
-}
+export const Filter = ({ handleInputChange, query }) => {
+	return (
+		<div className='input-wrapper'>
+			<input
+				className='input'
+				name='filter'
+				value={query}
+				onChange={handleInputChange}
+				placeholder='Filter by name'
+			/>
+		</div>
+	);
+};

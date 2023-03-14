@@ -1,10 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Hero.css";
 
 export const Hero = ({ id, name, image, species }) => {
+	const location = useLocation();
 	return (
 		<li className='item'>
-			<NavLink to={`/${id}`}>
+			<NavLink className='link' to={`/${id}`} state={{ from: location }}>
 				<img src={image} alt={name} className='img' />
 				<div className='description'>
 					<p className='hero-name'>{name}</p>

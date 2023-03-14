@@ -5,3 +5,13 @@
 .logo-wrapper {
 	margin-bottom: 32px;
 }
+
+@media (min-width: 769px) {
+	.logo {
+		width: 600px;
+	}
+
+	.logo-wrapper {
+		margin-bottom: 16px;
+	}
+}

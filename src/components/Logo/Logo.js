@@ -1,9 +1,9 @@
-import logo from "../../media/logo_mobile.png";
-import "./Logo.css"
+import logo from "../../media/logo.png";
+import "./Logo.css";
 
 export const Logo = () => {
 	return (
-		<div className="logo-wrapper">
+		<div className='logo-wrapper'>
 			<img src={logo} alt='Logo' className='logo' />
 		</div>
 	);
