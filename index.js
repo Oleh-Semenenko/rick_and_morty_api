@@ -7,7 +7,7 @@ import { App } from './components/App/App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		<BrowserRouter basename='Oleh-Semenenko/rick_and_morty_api'>
+		<BrowserRouter basename='/rick_and_morty_api'>
 			<App />
 		</BrowserRouter>
 	</React.StrictMode>
