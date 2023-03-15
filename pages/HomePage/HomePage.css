@@ -1,0 +1,12 @@
+.container {
+	text-align: center;
+
+	padding: 92px 24px;
+	margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+	.container {
+		padding: 86px 24px;
+	}
+}
