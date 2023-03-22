@@ -27,9 +27,9 @@ const CharacterPage = () => {
 					</NavLink>
 					<img src={character.image} alt={character.name} className='avatar' />
 					<h1 className='character-name'>{character.name}</h1>
-					<div className='description'>
-						<h2 className='description-title'>Informations</h2>
-						<ul>
+					<div className='info'>
+						<h2 className='info-header'>Informations</h2>
+						<ul className="info-list">
 							<li className='info-item'>
 								<span className='info-title'>Gender</span>
 								<span className='info-value'>{character.gender}</span>

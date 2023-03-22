@@ -7,9 +7,13 @@ export const HeroesList = ({ heroes }) => {
 
 	return (
 		<ul className='list'>
-			{heroes.map((hero) => {
-				return <Hero key={hero.id} {...hero} state={{ from: location }} />;
-			})}
+			{heroes.length > 0 ? (
+				heroes.map((hero) => {
+					return <Hero key={hero.id} {...hero} state={{ from: location }} />;
+				})
+			) : (
+				<div>Sorry, we did not find any character</div>
+			)}
 		</ul>
 	);
 };

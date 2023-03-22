@@ -7,6 +7,7 @@ import { HeroesList } from "components/HeroesList/HeroesList";
 import { getAllCharacters, getCharactersByName } from "../../services/api";
 import "./HomePage.css";
 
+
 const HomePage = () => {
 	const [heroes, setHeroes] = useState([]);
 	const location = useLocation();
@@ -29,10 +30,12 @@ const HomePage = () => {
 
 				const data = await getCharactersByName(name);
 				if (!data && name) {
-					throw new Error("We did not find any character ");
+					throw new Error("We did not find any character");
 				}
+
 				setHeroes(data);
 			} catch (error) {
+				setHeroes([]);
 				console.log(error.message);
 			}
 		}

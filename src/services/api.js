@@ -15,8 +15,12 @@ export const getCharacterById = async (id) => {
 };
 
 export const getCharactersByName = async (query) => {
-	const { data } = await axios.get(`${BASE_URL}/character/?name=${query}`);
-	const results = data.results;
-	const sortedByName = results.sort((a, b) => (a.name > b.name ? 1 : -1));
-	return sortedByName;
+	try {
+		const { data } = await axios.get(`${BASE_URL}/character/?name=${query}`);
+		const results = data.results;
+		const sortedByName = results.sort((a, b) => (a.name > b.name ? 1 : -1));
+		return sortedByName;
+	} catch (error) {
+		
+	}
 };

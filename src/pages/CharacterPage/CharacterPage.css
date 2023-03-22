@@ -37,11 +37,11 @@
 	line-height: 1.19;
 }
 
-.description {
+.info {
 	width: 312px;
 }
 
-.description-title {
+.info-header {
 	color: #8e8e93;
 	font-weight: 500;
 	font-size: 20px;
@@ -59,7 +59,7 @@
 }
 
 .info-title {
-	color: #081F32;
+	color: #081f32;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.5;
@@ -93,11 +93,11 @@
 		line-height: 1.17;
 	}
 
-	.description {
-	width: 413px;
-}
+	.info {
+		width: 413px;
+	}
 
-	.description-title {
+	.info-header {
 		font-size: 24px;
 		text-align: center;
 	}
